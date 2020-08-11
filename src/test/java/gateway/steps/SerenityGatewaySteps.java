@@ -17,9 +17,15 @@ public class SerenityGatewaySteps {
         page.clickSomeButton();
     }
 
-    @Step
+    @Step("Click send button")
     public void clickSendButton() {
         page.clickSendButton();
     }
+
+    @Step("Input text into message field")
+    public void typeMessage() { page.typeMessage(); }
+
+    @Step("Verify captcha is displayed")
+    public void verifyCaptchaIsDisplayed() { page.verifyCaptchaIsDisplayed(); }
 
 }

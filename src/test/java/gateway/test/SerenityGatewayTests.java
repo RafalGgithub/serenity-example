@@ -24,6 +24,8 @@ public class SerenityGatewayTests {
     public void sendTextMessage() {
     gateway.open();
     gateway.clickSomeButton();
+    gateway.typeMessage();
     gateway.clickSendButton();
+    gateway.verifyCaptchaIsDisplayed();
     }
 }

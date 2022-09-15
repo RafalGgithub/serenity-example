@@ -13,8 +13,8 @@ public class SerenityGatewaySteps {
     }
 
     @Step("Click some button")
-    public void clickSomeButton() {
-        page.clickSomeButton();
+    public void clickCookiesAcceptButton() {
+        page.clickCookiesAcceptButton();
     }
 
     @Step("Click send button")

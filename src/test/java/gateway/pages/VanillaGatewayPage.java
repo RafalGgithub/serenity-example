@@ -30,11 +30,11 @@ public class VanillaGatewayPage {
         return this;
     }
 
-    public VanillaGatewayPage clickSomeButton() {
+    public VanillaGatewayPage clickCookiesAcceptButton() {
         LOGGER.info("Click some button");
 
-        WebElement button = getDriver().findElement(SOME_BUTTON);
-        waitForMethods.clickable(SOME_BUTTON, 5);
+        WebElement button = getDriver().findElement(COOKIES_ACCEPT_BUTTON);
+        waitForMethods.clickable(COOKIES_ACCEPT_BUTTON, 5);
         button.click();
         return this;
     }

@@ -23,7 +23,7 @@ public class SerenityGatewayTests {
     @Test
     public void sendTextMessage() {
     gateway.open();
-    gateway.clickSomeButton();
+    gateway.clickCookiesAcceptButton();
     gateway.typeMessage();
     gateway.clickSendButton();
     gateway.verifyCaptchaIsDisplayed();

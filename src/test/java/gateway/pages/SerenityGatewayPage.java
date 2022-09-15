@@ -18,10 +18,10 @@ public class SerenityGatewayPage extends PageObject
     TestData testData = new TestData();
     private static final Logger LOGGER = LoggerFactory.getLogger(SerenityGatewayPage.class);
 
-    public void clickSomeButton() {
+    public void clickCookiesAcceptButton() {
         LOGGER.info("Click some button");
 
-        WebElement button = getDriver().findElement(SOME_BUTTON);
+        WebElement button = getDriver().findElement(COOKIES_ACCEPT_BUTTON);
         waitFor(button).waitUntilClickable();
         button.click();
     }

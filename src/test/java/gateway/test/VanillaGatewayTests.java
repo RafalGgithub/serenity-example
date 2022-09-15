@@ -11,7 +11,7 @@ public class VanillaGatewayTests extends SeleniumBase {
     public void sendTextMessage() {
 
         VanillaGatewayPage gateway = new VanillaGatewayPage(getDriver());
-        gateway.open().clickSomeButton().clickSendButton();
+        gateway.open().clickCookiesAcceptButton().clickSendButton();
         //gateway.clickSomeButton();
         //gateway.clickSendButton();
     }

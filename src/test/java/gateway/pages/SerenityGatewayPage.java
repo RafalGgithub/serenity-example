@@ -2,7 +2,7 @@ package gateway.pages;
 
 import gateway.data.TestData;
 import net.serenitybdd.core.pages.PageObject;
-import net.thucydides.core.annotations.DefaultUrl;
+import net.serenitybdd.annotations.DefaultUrl;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import static gateway.locators.GatewayPageLocators.*;
 
 @DefaultUrl("https://sms.priv.pl/")
-
 public class SerenityGatewayPage extends PageObject
 {
 

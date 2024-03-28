@@ -1,24 +1,18 @@
 package gateway.test;
 
 import gateway.steps.SerenityGatewaySteps;
-import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Narrative;
-import net.thucydides.core.annotations.Steps;
+import net.serenitybdd.annotations.Narrative;
+import net.serenitybdd.annotations.Steps;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
+import org.junit.jupiter.api.extension.ExtendWith;
+import net.serenitybdd.junit5.SerenityJUnit5Extension;
 
-
-@RunWith(SerenityRunner.class)
+@ExtendWith(SerenityJUnit5Extension.class)
 @Narrative(text={"Testing sms gateway"})
 public class SerenityGatewayTests {
 
-    @Managed
-    WebDriver driver;
-
     @Steps
-    SerenityGatewaySteps gateway;
+    SerenityGatewaySteps gateway = new SerenityGatewaySteps();
 
     @Test
     public void sendTextMessage() {

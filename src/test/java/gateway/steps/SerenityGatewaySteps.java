@@ -1,31 +1,33 @@
 package gateway.steps;
 
 import gateway.pages.SerenityGatewayPage;
-import net.thucydides.core.annotations.Step;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class SerenityGatewaySteps {
 
-    private SerenityGatewayPage page;
+    private SerenityGatewayPage page = new SerenityGatewayPage();
 
-    @Step("Open gateway homepage")
+    @Given("Open gateway homepage")
     public void open() {
         page.open();
     }
 
-    @Step("Click some button")
+    @When("Click cookie accept button")
     public void clickCookiesAcceptButton() {
         page.clickCookiesAcceptButton();
     }
 
-    @Step("Click send button")
+    @When("Click send button")
     public void clickSendButton() {
         page.clickSendButton();
     }
 
-    @Step("Input text into message field")
+    @When("Input text into message field")
     public void typeMessage() { page.typeMessage(); }
 
-    @Step("Verify captcha is displayed")
+    @Then("Verify captcha is displayed")
     public void verifyCaptchaIsDisplayed() { page.verifyCaptchaIsDisplayed(); }
 
 }

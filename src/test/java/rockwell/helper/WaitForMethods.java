@@ -1,4 +1,4 @@
-package gateway.helper;
+package rockwell.helper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,25 +7,28 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class WaitForMethods  {
+public class WaitForMethods {
 
 
+    public static final Duration TIMEOUT = Duration.ofSeconds(10);
     private final WebDriver driver;
 
     public WaitForMethods(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void clickable(By locator, long timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    public void clickable(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public void visibilityOf(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-    /*
-    TODO rest of needed waits
-     */
+
+    public void textToBePresent(By locator, String text) {
+        WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(locator,text));
+    }
 }

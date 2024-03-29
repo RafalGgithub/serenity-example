@@ -1,20 +1,4 @@
-# Serenity JUnit Starter project
-
-
-This is the simplest possible build script setup for Serenity BDD using Java. 
-
-This is a very minimal sample project using JUnit and Serenity BDD in Java. 
-You can use this project as a quick starting point for your own projects.
-
-## Get the code
-
-Git:
-
-    git clone https://github.com/serenity-bdd/serenity-junit-starter.git
-    cd serenity-junit-starter
-
-
-Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-starter/archive/master.zip) file.
+# Serenity Cucumber project using Page Object Pattern
 
 ## Use Maven
 

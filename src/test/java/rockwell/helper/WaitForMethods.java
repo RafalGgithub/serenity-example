@@ -2,6 +2,7 @@ package rockwell.helper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,9 +27,13 @@ public class WaitForMethods {
         WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-
-    public void textToBePresent(By locator, String text) {
+    public void staleness(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(locator,text));
+        wait.until(ExpectedConditions.stalenessOf(element));
+    }
+
+    public void staleness(WebElement element, int timeoutmilis) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(timeoutmilis));
+        wait.until(ExpectedConditions.stalenessOf(element));
     }
 }

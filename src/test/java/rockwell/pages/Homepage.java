@@ -3,7 +3,6 @@ package rockwell.pages;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import rockwell.data.TestData;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.annotations.DefaultUrl;
@@ -19,7 +18,6 @@ import static rockwell.locators.HomepageLocators.*;
 public class Homepage extends PageObject
 {
 
-    TestData testData = new TestData();
     WaitForMethods waitForMethods = new WaitForMethods(getDriver());
     JavascriptExecutor js = (JavascriptExecutor) getDriver();
 
@@ -56,8 +54,8 @@ public class Homepage extends PageObject
     public void inputPriceRange(String priceFrom, String priceTo) {
         log.info("Inputting %s-%s price range".formatted(priceFrom,priceTo));
 
-        testData.setPriceFrom(priceFrom);
-        testData.setPriceTo(priceTo);
+        TestData.setPriceFrom(priceFrom);
+        TestData.setPriceTo(priceTo);
 
         getDriver().findElement(MORE_FILTERS_BUTTON).click();
 

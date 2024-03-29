@@ -8,3 +8,6 @@ Feature: Rockwell homework
     And User inputs from 500 to 8000 price range
     And User filters z 7 dni advanced filtering option
     And User clicks search button
+    And User picks 3 search result
+    Then Price should be in selected range
+    And User checks credit rate

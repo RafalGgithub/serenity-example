@@ -26,7 +26,7 @@ public class PasswordValidator {
             String enteredPassword = encryptString(scanner.nextLine());
 
             if (enteredPassword.equals(PASSWORD)) {
-                System.out.println("Password correct");
+                System.out.println("Valid password");
                 break;
             } else {
                 System.out.println("Wrong password. Try again:");
